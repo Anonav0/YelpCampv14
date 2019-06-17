@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <p><i class="  fas fa-campground fa-3x "></i></p>
+        <h1> Please Log In</h1>
+    </div>
+    <div style="width: 30%; margin: 25px auto;">
+        <form class="form-signin" action="/login" method="post">
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" name="username" placeholder="Username" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control"  name="password" placeholder="Password" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+        <div class="signin-form">
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ./partials/footer %>

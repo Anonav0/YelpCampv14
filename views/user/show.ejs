@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+<div class="row no-gutters bg-light position-relative">
+  <div class="col-md-6 mb-md-0 p-md-4">
+    <img src="<%= user.avatar %>" class="w-100 rounded-circle"  alt="user profile image">
+  </div>
+  <div class="col-md-6 position-static p-4 pl-md-0">
+  	<h1 class=" text-center" ><%= user.firstName + " " + user.lastName %></h1>
+  	<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+  	<a class=" card-title" href="mailto:<%= user.email %>"><%= user.email %></a>
+  	<hr>
+    <h5 class="mt-0"><%= user.username %>'s campgrounds:</h5>
+    <ul>
+		<% campgrounds.forEach(function(campground) { %>
+			<li><a href="/campgrounds/<%= campground.id %>"><%= campground.name %></a></li>
+		<% }); %>
+	</ul>
+  </div>
+</div>
+<% include ../partials/footer %>
