@@ -9,7 +9,7 @@
   "author": "Anonavo",
   "license": "ISC",
   "dependencies": {
-    "async": "^3.0.1",
+    "async": "^3.2.2",
     "cloudinary": "^1.14.0",
     "connect-flash": "^0.1.1",
     "ejs": "^2.6.1",
